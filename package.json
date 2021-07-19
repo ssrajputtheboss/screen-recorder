@@ -1,15 +1,34 @@
 {
-  "name": "electron-app",
+  "name": "video-recorder-app",
+  "productName":"Video Recorder",
   "version": "1.0.0",
   "main": "main.js",
-  "author": "shash",
+  "author": "SHASHANK SINGH",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "test": "node test"
+    "test": "node test",
+    "build-installer":"electron-builder"
+  },
+  "build":{
+    "appId":"video-recorder-app"
+  },
+  "win":{
+    "target":["nsis"],
+    "icon":"icon/camera.ico",
+    "requestedExecutionLevel":"requireAdministrator"
+  },
+  "nsis":{
+    "installerIcon":"icon/camera.ico",
+    "uninstallerIcon":"icon/camera.ico",
+    "uninstallDisplayName":"Video Recorder",
+    "licence":"LICENSE",
+    "oneClick":true,
+    "allowToChangeInstallationDirectory":true
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "^13.1.7"
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7"
   }
 }

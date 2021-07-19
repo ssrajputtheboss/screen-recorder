@@ -5,13 +5,14 @@
     <title>Video Recorder</title>
   </head>
   <body>
-    <div style="display: flex;justify-content: start;flex-direction: column;align-items: start;"> 
-      <div style="margin: 2px;display: flex;justify-content: space-around;flex-direction: row;align-items: start;width: 100%;">
-        <input style="padding: 2px;" type="text" placeholder="filename" id="fname" value="output" />.mkv
+    <div style="display: flex;justify-content: start;flex-direction: column;align-items: center;"> 
+      <p id="timer" style="display: none;"></p>
+      <div id="head" style="margin: 2px;display: flex;justify-content: space-around;flex-direction: row;align-items: start;width: 100%;">
+        <input style="padding: 2px;" type="text" placeholder="filepath" id="fname" value="output" />.mkv
       </div>    
       <div style="margin: 2px;display: flex;justify-content: space-around;flex-direction: row;align-items: start;width: 100%;">
         <button onclick="startRecording()" id="start" style="padding: 2px;">start</button>
-        <button onclick="stopRecording()" id="stop" style="padding: 2px;background-color: red;color: white;" >stop</button>
+        <button onclick="stopRecording()" id="stop" style="padding: 2px;background-color: red;color: white;" disabled>stop</button>
       </div>
     </div>
     <script src="render.js">
