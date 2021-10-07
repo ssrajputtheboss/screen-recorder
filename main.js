@@ -22,5 +22,5 @@ app.whenReady().then(() => {
 app.on('window-all-closed',()=>app.quit())
 
 ipcMain.on('save-close',(e,a)=>{
-  setTimeout(()=>app.quit(),2000)
+  setTimeout(()=>app.quit(),15000)
 })
